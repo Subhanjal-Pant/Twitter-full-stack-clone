@@ -11,7 +11,7 @@ import { CiCircleMore } from "react-icons/ci";
 
 const LeftSidebar = () => {
   return (
-    <div className="">
+    <div className="w-[40%]">
       <div className="flex flex-col ">
         <div className="twitter-logo invert my-5 mx-3">
           <svg
@@ -112,7 +112,7 @@ const LeftSidebar = () => {
           </div>
         </div>
 
-        <button className="w-full bg-white text-black h-14 rounded-full font-bold text-2xl mt-4 active:scale-95">Post</button>
+        <div className="flex items-center justify-center"><button className="w-3/4 bg-white text-black h-12 rounded-full font-bold text-2xl mt-4 active:scale-95">Post</button></div>
 
       </div>
     </div>
