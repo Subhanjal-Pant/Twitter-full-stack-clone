@@ -11,7 +11,7 @@ import { CiCircleMore } from "react-icons/ci";
 
 const LeftSidebar = () => {
   return (
-    <div>
+    <div className="">
       <div className="flex flex-col ">
         <div className="twitter-logo invert my-5 mx-3">
           <svg
