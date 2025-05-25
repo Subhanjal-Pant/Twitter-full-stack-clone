@@ -2,8 +2,9 @@ import React from 'react'
 
 const Avatar = () => {
   return (
-    <div className='border-[100%] bg-blue-400'>
-        <img src="" alt="" />
+    <div className='border-[100%] rounded-full w-12 m-2'>
+        
+        <img className='rounded-full' src="./no_image_avatar.png" alt="Hello" />
     </div>
   )
 }

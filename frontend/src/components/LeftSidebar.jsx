@@ -56,7 +56,7 @@ const LeftSidebar = () => {
         </div>
         <div>
           <div className="flex items-center gap-1  w-56 h-16 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]">
-            <img src="./public/grok.png" alt="Error" width={"46px"} className="ml-[4px]" />
+            <img src="./grok.png" alt="Error" width={"46px"} className="ml-[4px]" />
             <h2 className="text-2xl font-bold mt-1">Grok</h2>
 
           </div>
