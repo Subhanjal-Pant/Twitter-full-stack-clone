@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightSidebar = () => {
   return (
-    <div className='w-1/3 text-center'>RightSidebar</div>
+    <div className='w-[30%] text-center'>RightSidebar</div>
   )
 }
 

@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-row bg-black px-20'>
+      <div className='flex flex-row bg-black px-20 min-h-screen'>
+        
         <Home />
       </div>
     </>

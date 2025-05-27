@@ -12,7 +12,7 @@ import 'tippy.js/dist/tippy.css';
 
 const CreatePostTwo = () => {
   return (
-    <div>
+    <div className='border border-t-0 border-b-0 '>
       <div className='flex flex-row gap-2 p-2 pr-4 '>
           <Avatar />
           <input className='h-10 my-2 w-full border-none focus:outline-none focus:ring-0 text-xl' type="text" placeholder="What's happening?"/>
@@ -67,7 +67,7 @@ const CreatePostTwo = () => {
             </div>
           </div>
         </div>
-        <button className='border p-1 bg-white text-black rounded-full w-18 active:scale-95 mt-3'>Post</button>
+        <button className='p-1 bg-white text-black rounded-full w-18 active:scale-95 mt-3'>Post</button>
       </div>
     </div>
   )
