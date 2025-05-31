@@ -7,18 +7,27 @@ import { useState } from "react";
 import { MdOutlinePoll } from "react-icons/md";
 import { CiBookmark } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import { FaBookmark } from "react-icons/fa";
+import { IoBookmarkSharp } from "react-icons/io5";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const Tweet = () => {
   const [liked, setLiked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const toggleBookmarked = () => {
+    console.log("Bookmarked");
+    setBookmarked((prev) => !prev);
+  };
+
   const toggleClicked = () => {
     console.log("Clicked!");
     setLiked((prev) => !prev);
   };
 
   return (
-    <div className="py-3 p-3 border border-b-0">
+    <div className="py-3 p-3 border-gray-400 border-[1px] border-b-0">
       <div>
         <div className="flex flex-col ">
           <div className="flex  items-center gap-1  h-12">
@@ -31,41 +40,80 @@ const Tweet = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
               optio!
             </div>
-            <div className="flex justify-center mt-2 px-1 ml-4 items-center h-[400px]">
-              <img className="h-[400px]  w-[400px] object-cover" src="./post.png" alt="" />
+            <div className="flex mt-2 px-2 ml-4 h-[400px] w-full">
+              <img
+                className="h-[400px] w-[720px] mx-2 object-cover"
+                src="./post.png"
+                alt=""
+              />
             </div>
-            <div className="flex justify-between mt-2 items-center">
+            <div className="flex justify-between mt-2 items-center px-6">
               <div className="group relative inline-block">
                 <FaRegComment className="text-2xl cursor-pointer" />
-                <div className="absolute hidden group-hover:block text-white text-xs">Comment</div>
+                <div className="absolute hidden group-hover:block text-white text-xs">
+                  Comment
+                </div>
               </div>
               <div className="group relative inline-block">
                 <BiRepost className="text-2xl cursor-pointer" size={30} />
                 <div className="absolute hidden group-hover:block text-white text-xs">
-                    Repost
+                  Repost
                 </div>
               </div>
-              <div className="w-10 h-10 items-center justify-between group relative inline-block">
+              <div className="w-10 h-10 items-center justify-between ">
                 {liked ? (
-                  <div 
-                   onClick={toggleClicked} 
-                  className="flex h-8 w-8 items-center justify-centers active:scale-95 cursor-pointer">
-                    <FcLike className="cursor-pointer" size={24} />
-                    <div className="absolute hidden group-hover:block text-white text-xs"></div>
+                  <div
+                    onClick={toggleClicked}
+                    className=" h-8 w-8 items-center justify-centers active:scale-95 cursor-pointer group relative inline-block"
+                  >
+                    <FcLike className="cursor-pointer" size={30} />
+                    <div className="absolute hidden group-hover:block text-white text-xs">
+                      Unlike
+                    </div>
                   </div>
                 ) : (
-                  <button
-                    className="flex min-h-8 min-w-8 items-center active:scale-95"
-                     onClick={toggleClicked} 
+                  <div
+                    className="min-h-8 min-w-8 items-center active:scale-95 group relative inline-block"
+                    onClick={toggleClicked}
                   >
-                     <CiHeart size={24} />
-                  </button>
+                    <CiHeart size={30} />
+                    <div className="absolute hidden group-hover:block text-white text-xs">
+                      Like
+                    </div>
+                  </div>
                 )}
               </div>
-              <MdOutlinePoll size={24} />
+              <div className="group relative inline-block">
+                <MdOutlinePoll size={30} />
+                <div className="absolute hidden group-hover:block text-white text-xs">
+                  View
+                </div>
+              </div>
 
-              <div>
-                <CiBookmark />
+              <div className="group relative inline-block">
+                {bookmarked ? (
+                  <div
+                    onClick={toggleBookmarked}
+                    className="h-8 w-8 items-center justify-center active:scale-95 cursor-pointer group relative inline-block"
+                  >
+                    <FaBookmark className="text-white" size={30}/>
+                    <div className="absolute hidden group-hover:block text-white text-xs">
+                      Unbookmark
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    onClick={toggleBookmarked}
+                    className="h-8 w-8 items-center justify-center active:scale-95 cursor-pointer group relative inline-block"
+                  >
+                    <CiBookmark size={30}/>
+                    <div className="absolute hidden group-hover:block text-white text-xs">
+                      Bookmark
+                    </div>
+                  </div>
+                )}
+
+                
               </div>
             </div>
           </div>
