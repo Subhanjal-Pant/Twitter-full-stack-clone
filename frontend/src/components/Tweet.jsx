@@ -7,6 +7,8 @@ import { useState } from "react";
 import { MdOutlinePoll } from "react-icons/md";
 import { CiBookmark } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Tweet = () => {
   const [liked, setLiked] = useState(false);
@@ -29,19 +31,28 @@ const Tweet = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
               optio!
             </div>
-            <div className="w-[90%] flex justify-center mt-2 px-1 ml-4">
-              <img className="w-[100%] object-cover" src="./post.png" alt="" />
+            <div className="flex justify-center mt-2 px-1 ml-4 items-center h-[400px]">
+              <img className="h-[400px]  w-[400px] object-cover" src="./post.png" alt="" />
             </div>
             <div className="flex justify-between mt-2 items-center">
-              <FaRegComment className="text-2xl" />
-              <BiRepost size={24} />
-              <div className="w-10 h-10 flex items-center justify-between ">
+              <div className="group relative inline-block">
+                <FaRegComment className="text-2xl cursor-pointer" />
+                <div className="absolute hidden group-hover:block text-white text-xs">Comment</div>
+              </div>
+              <div className="group relative inline-block">
+                <BiRepost className="text-2xl cursor-pointer" size={30} />
+                <div className="absolute hidden group-hover:block text-white text-xs">
+                    Repost
+                </div>
+              </div>
+              <div className="w-10 h-10 items-center justify-between group relative inline-block">
                 {liked ? (
-                  <button 
+                  <div 
                    onClick={toggleClicked} 
                   className="flex h-8 w-8 items-center justify-centers active:scale-95 cursor-pointer">
-                    <FcLike size={24} />
-                  </button>
+                    <FcLike className="cursor-pointer" size={24} />
+                    <div className="absolute hidden group-hover:block text-white text-xs"></div>
+                  </div>
                 ) : (
                   <button
                     className="flex min-h-8 min-w-8 items-center active:scale-95"

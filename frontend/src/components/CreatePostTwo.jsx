@@ -13,9 +13,11 @@ import 'tippy.js/dist/tippy.css';
 const CreatePostTwo = () => {
   return (
     <div className='border border-t-0 border-b-0 '>
-      <div className='flex flex-row gap-2 p-2 pr-4 '>
-          <Avatar />
-          <input className='h-10 my-2 w-full border-none focus:outline-none focus:ring-0 text-xl' type="text" placeholder="What's happening?"/>
+      <div className='flex flex-row items-center'>
+          <div className='h-16 w-16 '>
+            <Avatar />
+          </div>
+          <input className=' flex-grow h-10 border-none focus:outline-none focus:ring-0 text-xl' type="text" placeholder="What's happening?"/>
       </div>
       <p className='text-[#2B9BF0] flex gap-2 items-center pb-2 ml-20 font-bold cursor-pointer  border-t-0 border-r-0 border-l-0 w-[80%] border-[1px] border-gray-400'>
           <FaGlobeAmericas />   

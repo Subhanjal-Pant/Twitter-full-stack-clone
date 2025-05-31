@@ -6,9 +6,8 @@ import Feed from './Feed'
 
 const Home = () => {
   return (
-    <div className='flex flex-row justify-between w-full min-h-screen mx-[14%] px-2 bg-[#000000] text-gray-300 '>
+    <div className='flex flex-row justify-between w-[80%] min-h-screen mx-[8%] px-2 bg-[#000000] text-gray-300 '>
       <LeftSidebar />
-      
       <Feed />
       <RightSidebar />
     </div>

@@ -5,7 +5,7 @@ import Tweet from './Tweet'
 
 const Feed = () => {
   return (
-    <div className='border-t-0 border-gray-300 h-screen bg-[#000000] w-220 ml-60' >
+    <div className='flex flex-col border-t-0 border-gray-300 h-screen w-[700px] ml-100 items-center' >
       <div>
         <CreatePost />
         <Tweet />
