@@ -35,16 +35,16 @@ const Tweet = () => {
             <div className="flex justify-between mt-2 items-center">
               <FaRegComment className="text-2xl" />
               <BiRepost size={24} />
-              <div className="h-8 ">
+              <div className="w-10 h-10 flex items-center justify-between ">
                 {liked ? (
                   <button 
                    onClick={toggleClicked} 
-                  className="flex min-h-8 min-w-8 items-center bg-green-300">
+                  className="flex h-8 w-8 items-center justify-centers active:scale-95 cursor-pointer">
                     <FcLike size={24} />
                   </button>
                 ) : (
                   <button
-                    className="flex min-h-8 min-w-8 items-center bg-blue-300"
+                    className="flex min-h-8 min-w-8 items-center active:scale-95"
                      onClick={toggleClicked} 
                   >
                      <CiHeart size={24} />
