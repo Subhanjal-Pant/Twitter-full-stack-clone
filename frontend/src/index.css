@@ -3,3 +3,7 @@ body{
     background-color: black;
     margin:0
 }
+
+@theme {
+  --breakpoint-rb: 105rem;
+}

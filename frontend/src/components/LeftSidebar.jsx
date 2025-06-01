@@ -6,10 +6,16 @@ import { PiBookmarkSimple } from "react-icons/pi";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { IoMdPerson } from "react-icons/io";
 import { CiCircleMore } from "react-icons/ci";
-
+import { useNavigate } from "react-router-dom";
 
 
 const LeftSidebar = () => {
+  const navigate = useNavigate();
+
+  const handleRouteProfile =()=>navigate('/profile');
+  const handleHomeNavigate = ()=> navigate('/');
+  const handleGrokRoute = ()=> navigate("/grok")
+
   return (
     <div className="w-[250px] pt-8 fixed left-[300px]">
       <div className="flex flex-col gap-0">
@@ -27,7 +33,8 @@ const LeftSidebar = () => {
         </div>
 
         <div>
-          <div className="flex items-center gap-3 w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]">
+          <div className="flex items-center gap-3 w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]"
+          onClick={handleHomeNavigate}>
             <CiHome className="text-4xl ml-1"/>
             <h2 className="text-xl font-bold mt-1">Home</h2>
 
@@ -56,7 +63,8 @@ const LeftSidebar = () => {
           </div>
         </div>
         <div>
-          <div className="flex items-center gap-1  w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]">
+          <div className="flex items-center gap-1  w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]"
+          onClick={handleGrokRoute}>
             <img src="./grok.png" alt="Error" width={"46px"} className="ml-[4px]" />
             <h2 className="text-xl font-bold mt-1">Grok</h2>
 
@@ -99,7 +107,8 @@ const LeftSidebar = () => {
           </div>
         </div>
         <div>
-          <div className="flex items-center gap-3 w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]">
+          <div className="flex items-center gap-3 w-56 h-14 cursor-pointer hover:border-2 hover:border-white rounded-full box-border border-2 border-[#0000]"
+          onClick={handleRouteProfile}>
             <IoMdPerson className="text-4xl ml-1"/>
             <h2 className="text-xl font-bold mt-1">Profile</h2>
 
