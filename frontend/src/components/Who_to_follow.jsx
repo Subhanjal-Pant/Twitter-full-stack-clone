@@ -6,7 +6,7 @@ const Who_to_follow = () => {
     <div className=' w-[95%] flex flex-col my-2 mx-2 px-2 '>
         <div className='flex items-center justify-between'>
             <div className='flex items-center '>
-                <Avatar />
+                <Avatar width='16' scale={75}/>
                 <div>
                     <p>NameOfPerson</p>
                     <p>@NameOfPerson</p>

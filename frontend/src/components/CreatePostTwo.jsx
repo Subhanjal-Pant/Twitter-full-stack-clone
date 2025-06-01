@@ -14,10 +14,10 @@ const CreatePostTwo = () => {
   return (
     <div className='border border-t-0 border-b-0 '>
       <div className='flex flex-row items-center'>
-          <div className='h-16 w-16 '>
-            <Avatar />
+          <div className='h-16 w-16 ml-3'>
+            <Avatar scale={75} />
           </div>
-          <input className='px-4 flex-grow h-10 border-none focus:outline-none focus:ring-0 text-xl' type="text" placeholder="What's happening?"/>
+          <input className='px-1 flex-grow h-10 border-none focus:outline-none focus:ring-0 text-xl' type="text" placeholder="What's happening?"/>
       </div>
       <p className='text-[#2B9BF0] flex gap-2 items-center pb-2 ml-20 font-bold cursor-pointer  border-t-0 border-r-0 border-l-0 w-[80%] border-[1px] border-gray-400'>
           <FaGlobeAmericas />   

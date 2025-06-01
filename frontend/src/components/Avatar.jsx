@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Avatar = ({width =12}) => {
+const Avatar = ({width =16, scale = 100}) => {
   return (
-    <div className={`border-[100%] rounded-full w-${width} m-2`}>
+    <div className={`scale-${scale} rounded-full w-${width}`}>
         
         <img className='rounded-full' src="./no_image_avatar.png" alt="Hello" />
     </div>

@@ -30,8 +30,8 @@ const Tweet = () => {
     <div className="py-3 p-3 border-gray-400 border-[1px] border-b-0">
       <div>
         <div className="flex flex-col ">
-          <div className="flex  items-center gap-1  h-12">
-            <Avatar />
+          <div className="flex  items-center gap-1 h-12">
+            <Avatar scale={75}/>
             <h1 className="font-bold text-lg">Username</h1>
             <p className="text-gray-400 text-[13px]">@userName .@time</p>
           </div>

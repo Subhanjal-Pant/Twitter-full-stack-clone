@@ -35,7 +35,7 @@ const Profile = () => {
             alt="banner"
           />
           <div className="border-[4px] border-black rounded-full p-0 absolute top-30 left-2">
-            <Avatar width="30" />
+            <Avatar width='30' scale='100' />
           </div>
           <button className="p-2 px-3 font-bold absolute right-10 mt-3 border rounded-3xl hover:bg-gray-900">
             Edit Profile
