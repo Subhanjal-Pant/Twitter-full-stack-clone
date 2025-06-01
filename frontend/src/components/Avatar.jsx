@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Avatar = ({width ='12'}) => {
+const Avatar = ({width =12}) => {
   return (
     <div className={`border-[100%] rounded-full w-${width} m-2`}>
         

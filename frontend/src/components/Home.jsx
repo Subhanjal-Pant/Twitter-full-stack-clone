@@ -12,6 +12,8 @@ const Home = () => {
       <RightSidebar />
     </div>
   )
+
+  
 }
 
 export default Home
