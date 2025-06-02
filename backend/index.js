@@ -1,5 +1,8 @@
 import express from 'express';
 import dotenv from "dotenv";
+import databaseConnection from './config/database.js';
+
+databaseConnection();
 
 const app = express()
 dotenv.config({
@@ -13,4 +16,5 @@ app.get('/', (req, res) => {
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}`)
+  console.log(`localhost:${process.env.PORT}`)
 })
