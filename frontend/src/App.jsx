@@ -12,6 +12,7 @@ import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import Layout from "./components/Layout";
 import Grok from "./components/Grok";
+import Login from "./components/Login";
 
 
 const App = () => {
@@ -36,8 +37,12 @@ const App = () => {
           path: "/grok",
           element: <Grok />
         }
-      ],
+      ],                               
     },
+    {
+      path: "/login",
+      element: <Login />
+    }
   ]);
 
   return (
