@@ -5,24 +5,24 @@ import cookieParser  from 'cookie-parser';
 import userRoute from "./routes/userRoute.js"
 
 
-
+dotenv.config({
+    path: ".env"
+})
 const app = express()
 
 app.use(express.urlencoded({
-  extends:true
+  extended:true
 }));
 
 app.use(express.json());
 app.use(cookieParser());
 
-dotenv.config({
-    path: ".env"
-})
+
 databaseConnection();
 
 // APIs
 
-app.use("api/v1/user", userRoute)
+app.use("/api/v1/user/", userRoute)
 
 app.get("/home", (req,res)=>{
   res.status(200).json({
