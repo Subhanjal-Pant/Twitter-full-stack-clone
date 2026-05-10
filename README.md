@@ -5,7 +5,7 @@ Unlike "Microwave" development that relies on heavy abstractions, this project i
 - **Performance:** Optimized state updates and minimal external dependencies.
 
 ## 🤝 Contributing
-Contributions areBased on your repository, I have drafted a professional `README.md` that highlights the "Chef" engineering approach—focusing on first principles and a clean full-stack architecture.
+Contributions areBased on your repository, I have drafted a professional `README.md` that highlights the engineering approach—focusing on first principles and a clean full-stack architecture.
 
 Since I cannot directly commit to your GitHub, you can copy the content below into a new file named `README.md` in your project's root directory.
 
